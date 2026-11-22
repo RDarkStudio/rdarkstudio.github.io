@@ -1,0 +1,23 @@
+{
+ "name": "0.15.0",
+ "files": {
+  "pc": {
+   "platform": "pc",
+   "code": 1500,
+   "min_code": 1500,
+   "engine": "4.7.2",
+   "sha256": "15b662a7f64b3411caeaafd490d513455be683e0a5b82000e44e85f40dd5be4f",
+   "url": "https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.15.0/vellmora-pc-v0.15.0.pck",
+   "signature": "ExVyc3zSAXdEp/izxh+cPYwg2p6OP72nqupD12jlHXFJAqL1YM7vVgHqsCCZeRwp1r9EvFeOHZPk/67rxNvhvHnVlyihHbARywKNpbJqm5rshCGL24lFe6TiddQKxnxYH891gaMUwAJmRwPwMW5HkGYbHkoROEgrhOXXbnNkhkWyC6WCpH2rdKt3oWaTyeNkPuOshfEShHeX+I1CZ3DJl1Ii3c8e2YNmNHpVW1BMY0pVPfzMVhHfFuunfPeOos6uZEaCi+iO5kDPj6soyHqmDBRBJWmi32bGlybxi196vrS5cQTeyLoFrDyd3gsnzlwfNrdtcRqkVnz5gdqUXtHDgj6jYQhYX4y52VoMCJ4BbS8b4Lq2zleDNgIb2qh9ZQhERCPeNySKIeRx/mhH2YheAuzujrqPtHklGNtRxfi614A3HncMTMwa8zLqmWReFDh2NvnhJEqoWIPyDPY/3tMpTqHGuOg0zj69S8r0K6sprEMkKHMUsFGR1R1/u8dzXUWm"
+  },
+  "android": {
+   "platform": "android",
+   "code": 1500,
+   "min_code": 1500,
+   "engine": "4.7.2",
+   "sha256": "15b662a7f64b3411caeaafd490d513455be683e0a5b82000e44e85f40dd5be4f",
+   "url": "https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.15.0/vellmora-android-v0.15.0.pck",
+   "signature": "vKdJZ6IjDGtrpGg2C6Atv4UOiLGyw9L6Sl2C9x6ApxvWUD1ZdMUpjZG57qH8S8WJUcE0CmsycEJBz/ugmfrh5pZn0YkcEZo6mGPJknZbN37DPRVJ62T13d0gPNK9Y9t2ZLJ/U/YXQlUhf07jl2RDSkHGECi8ZYwIHYWJhEjscjwBl1if5cXlIONMrGfgOU38fsghVicitpd1pmAdgb0nM2nICQfpHQbZTXQTtxUEOye9tcHO1b+yNrY5qf2RBl+AAI8BVgz0BEM5s/pQowWgQ+opI6Pv97iMA+TWKG9+EJwzNvZDTO4fUlgluymhcXwH+OYizO8tofd5smFz5Ap12b5mmA7EgZYDndF+1AnBh1vNf4UI2MygyBPBLoqmUBAmEkf80ydFi+OEdtgFkdBKA8QaairpGIJQgIaUy9tLM/6bvr7YInSa/HojSa7dGh0yVpzib4ZtZgCGl7yStzSCglkaMSIstVOzWkViQWElduRMtFXwoPdlXvg7VRrHhsIy"
+  }
+ }
+}
