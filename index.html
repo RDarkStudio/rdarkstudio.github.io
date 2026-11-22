@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vellmora, el castillo que se baraja</title>
+<meta name="description" content="Vellmora es un roguelike de torre en pixel art. Ocho aventureros, 30 pisos y tres puertas por piso: cada una es una apuesta.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vellmora">
+<meta property="og:description" content="Sube piso a piso. Cada puerta es una apuesta.">
+<meta property="og:url" content="https://rdarkstudio.github.io/">
+<meta property="og:image" content="https://rdarkstudio.github.io/img/compartir.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#120e0b">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<header class="barra">
+  <a class="marca" href="#inicio">Vellmora</a>
+  <nav aria-label="Secciones"><a href="#leyenda">Leyenda</a><a href="#aventureros">Aventureros</a><a href="#bestiario">Bestiario</a><a href="#descargar">Descargar</a></nav>
+</header>
+<main id="contenido">
+  <section class="portada" id="inicio">
+    <div class="titulo"><span class="antorcha" aria-hidden="true"></span><h1>Vellmora</h1><span class="antorcha" aria-hidden="true"></span></div>
+    <p class="lema">Sube piso a piso. Cada puerta es una apuesta.</p>
+    <div class="puertas" role="group" aria-label="Elige una puerta">
+      <button type="button" class="puerta" aria-label="Primera puerta"></button>
+      <button type="button" class="puerta" aria-label="Segunda puerta"></button>
+      <button type="button" class="puerta" aria-label="Tercera puerta"></button>
+    </div>
+    <div class="resultado" aria-live="polite"><p id="que">Elige una puerta.</p><p id="pista">Las tres están barajadas con las mismas probabilidades que en el juego.</p></div>
+    <div class="acciones"><button type="button" class="tabla" id="otra" hidden>Barajar otra vez</button><a class="tabla oro" href="jugar/">Jugar en el navegador</a><a class="tabla" href="#descargar">Descargar</a></div>
+  </section>
+
+  <section class="muro" id="juego">
+    <div class="ancho">
+      <h2>Treinta pisos hasta la cima</h2>
+      <div class="reglas">
+        <div><h3>Tres puertas por piso</h3><p>Todas cerradas y sin letrero. Detrás puede haber un combate, un cofre, un santuario, una tienda, una hoguera o un casino. Desde el piso 3 también aparecen los élites.</p></div>
+        <div><h3>Combate por turnos</h3><p>Golpea, cúbrete, esquiva o tira el d20 para arriesgar más daño. Los golpes pesados de los jefes se avisan un turno antes.</p></div>
+        <div><h3>La Suerte manda</h3><p>Mejora críticos, esquivas, cofres y el casino. Algunos cofres muerden: son Mímicos.</p></div>
+        <div><h3>Un jefe cada 5 pisos</h3><p>Seis guardianes entre tú y la cima. Cada aventurero que llega arriba tiene su propio final.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leyenda">
+    <div class="ancho"><article class="pergamino">
+      <h2>La leyenda de Vellmora</h2>
+      <p>Vellmora fue un castillo tan grande como una ciudad. Dentro había mercados, templos, barrios y cementerios. Era un reino pobre, de piedra gris y cosechas escasas.</p>
+      <p>Una noche de invierno cayó del cielo una estrella dorada. Atravesó las nubes sin hacer ruido y se hundió en el patio del castillo. Al amanecer, los que se acercaron no encontraron una roca. Encontraron algo que los miraba.</p>
+      <p>Un joven sin trono fue el primero en sentarse frente a él. Vhal-Oruun le ofreció un juego. Oro para Vellmora, suerte para sus ejércitos y un reino que nunca cayera, mientras alguien siguiera jugando. La apuesta era sencilla: cada invierno, una vida elegida al azar. El joven aceptó.</p>
+      <details><summary>Leer la leyenda completa</summary><div><p>Vellmora fue un castillo tan grande como una ciudad. Dentro había mercados, templos, barrios y cementerios. Era un reino pobre, de piedra gris y cosechas escasas.</p><p>Una noche de invierno cayó del cielo una estrella dorada. Atravesó las nubes sin hacer ruido y se hundió en el patio del castillo. Al amanecer, los que se acercaron no encontraron una roca. Encontraron algo que los miraba.</p><p>Nadie supo nombrarlo. Los sacerdotes lo llamaron Vhal-Oruun, El Que Reparte. No tenía una forma fija: unos veían una montaña de monedas que respiraba, otros una mano con demasiados dedos sosteniendo dados, y los que lo miraban mucho tiempo dejaban de hablar.</p><p>Venía de un lugar más allá de las estrellas donde todo se decide al azar, y traía consigo un hambre: el hambre de que alguien apueste.</p><p>Un joven sin trono fue el primero en sentarse frente a él. Vhal-Oruun le ofreció un juego. Oro para Vellmora, suerte para sus ejércitos y un reino que nunca cayera, mientras alguien siguiera jugando. La apuesta era sencilla: cada invierno, una vida elegida al azar. El joven aceptó.</p><p>El oro brotó de la tierra. Los talladores fabricaron dados con fragmentos de la estrella caída, y esos dados nunca fallaban. La ciudad llenó sus calles de casas de juego. Todos apostaban, porque en Vellmora apostar era rezar. El joven se volvió rey, y durante siglos el reino prosperó mientras alguien desaparecía cada invierno.</p><p>Cuando el pueblo descubrió el precio de su fortuna, rodeó el palacio con antorchas. El rey no quiso perderlo todo e hizo su última apuesta: las vidas de todos sus súbditos contra la eternidad de su reino.</p><p>Vhal-Oruun aceptó, y cobró. Nadie dentro volvió a ser humano. El dios convirtió a cada habitante en una ficha de su juego, moldeada por lo que más deseaba o temía.</p><p>Los guardias que juraron no abandonar sus puestos son huesos que siguen de pie. Los jugadores del gran salón se fundieron con sus máquinas. Las bestias de los establos y las alcantarillas comieron oro y crecieron con él. El rey, que no soltó su espada ni su corona, se pudre en el trono sin poder morir.</p><p>El castillo entero se volvió la mesa de juego del dios. Creció hacia arriba, piso sobre piso, y sus salas cambian de lugar cada vez que Vhal-Oruun reparte, como cartas barajadas. En lo más alto, sentado donde antes estuvo el patio de la estrella, El Que Reparte sigue esperando a su próximo jugador.</p><p>Los aventureros llegan por muchas razones: fama, fe, conocimiento, tesoros o una deuda antigua. Oyen el tintineo del oro detrás de cada puerta y una voz que les pregunta cuánto están dispuestos a apostar.</p><p>Muchos entran y jamás salen. Quien pierde su última apuesta se vuelve otra ficha en la mesa, y así crece la leyenda.</p></div></details>
+    </article></div>
+  </section>
+
+  <section class="muro" id="aventureros">
+    <div class="ancho">
+      <h2>Ocho aventureros</h2>
+      <p class="entrada">Todos entran a Vellmora por una razón distinta. Estos son sus valores al empezar.</p>
+      <ul class="heroes">
+        <li class="heroe">
+          <img class="px" src="img/heroe_caballero.png" width="144" height="144" alt="">
+          <h3>Caballero</h3>
+          <p class="cita">Busca fama y honor liberando el castillo de la maldad que habita en él.</p>
+          <p class="ventaja">Muy resistente, pero golpea flojo.</p>
+          <dl><div><dt>Vida</dt><dd>60</dd></div><div><dt>Ataque</dt><dd>3</dd></div><div><dt>Defensa</dt><dd>5</dd></div><div><dt>Suerte</dt><dd>1</dd></div><div><dt>Oro</dt><dd>10</dd></div><div><dt>Pociones</dt><dd>1</dd></div></dl>
+        </li>
+        <li class="heroe">
+          <img class="px" src="img/heroe_clerigo.png" width="144" height="144" alt="">
+          <h3>Clérigo</h3>
+          <p class="cita">Sirvió en la capilla del castillo antes de la caída. Vuelve para purificar sus salones.</p>
+          <p class="ventaja">Empieza con 3 pociones y el Cinturón de pociones: curan más.</p>
+          <dl><div><dt>Vida</dt><dd>40</dd></div><div><dt>Ataque</dt><dd>3</dd></div><div><dt>Defensa</dt><dd>2</dd></div><div><dt>Suerte</dt><dd>2</dd></div><div><dt>Oro</dt><dd>10</dd></div><div><dt>Pociones</dt><dd>3</dd></div></dl>
+        </li>
+        <li class="heroe">
+          <img class="px" src="img/heroe_mago.png" width="144" height="144" alt="">
+          <h3>Mago</h3>
+          <p class="cita">Busca los grimorios perdidos de la gran biblioteca del castillo.</p>
+          <p class="ventaja">Pega muy fuerte y sus críticos hacen x3, pero aguanta poco.</p>
+          <dl><div><dt>Vida</dt><dd>30</dd></div><div><dt>Ataque</dt><dd>8</dd></div><div><dt>Defensa</dt><dd>0</dd></div><div><dt>Suerte</dt><dd>2</dd></div><div><dt>Oro</dt><dd>10</dd></div><div><dt>Pociones</dt><dd>1</dd></div></dl>
+        </li>
+        <li class="heroe">
+          <img class="px" src="img/heroe_bandido.png" width="144" height="144" alt="">
+          <h3>Bandido</h3>
+          <p class="cita">No viene por la gloria: viene por los tesoros que nadie ha sacado de ahí.</p>
+          <p class="ventaja">Empieza con 30 de oro y gana +50% de oro en combate.</p>
+          <dl><div><dt>Vida</dt><dd>36</dd></div><div><dt>Ataque</dt><dd>6</dd></div><div><dt>Defensa</dt><dd>0</dd></div><div><dt>Suerte</dt><dd>3</dd></div><div><dt>Oro</dt><dd>30</dd></div><div><dt>Pociones</dt><dd>1</dd></div></dl>
+        </li>
+        <li class="heroe">
+          <img class="px" src="img/heroe_vagabundo.png" width="144" height="144" alt="">
+          <h3>Vagabundo</h3>
+          <p class="cita">No tiene nada que perder. Lleva años durmiendo en los pasillos de afuera y se los sabe de memoria.</p>
+          <p class="ventaja">Sin oro ni pociones, pero ve qué hay tras cada puerta.</p>
+          <dl><div><dt>Vida</dt><dd>44</dd></div><div><dt>Ataque</dt><dd>4</dd></div><div><dt>Defensa</dt><dd>1</dd></div><div><dt>Suerte</dt><dd>3</dd></div><div><dt>Oro</dt><dd>0</dd></div><div><dt>Pociones</dt><dd>0</dd></div></dl>
+        </li>
+        <li class="heroe">
+          <img class="px" src="img/heroe_enano.png" width="144" height="144" alt="">
+          <h3>Enano</h3>
+          <p class="cita">Su clan forjó el oro del castillo. Viene a recuperar lo que es suyo.</p>
+          <p class="ventaja">Duro como la roca y con oro, pero sin nada de suerte. Atrae el doble de Mímicos.</p>
+          <dl><div><dt>Vida</dt><dd>52</dd></div><div><dt>Ataque</dt><dd>5</dd></div><div><dt>Defensa</dt><dd>3</dd></div><div><dt>Suerte</dt><dd>0</dd></div><div><dt>Oro</dt><dd>30</dd></div><div><dt>Pociones</dt><dd>1</dd></div></dl>
+        </li>
+        <li class="heroe">
+          <img class="px" src="img/heroe_elfo.png" width="144" height="144" alt="">
+          <h3>Elfo</h3>
+          <p class="cita">Vio desde el bosque cómo la maldad se tragaba el castillo, hace ya siglos.</p>
+          <p class="ventaja">Mucha suerte: más críticos y esquivas, pero frágil.</p>
+          <dl><div><dt>Vida</dt><dd>34</dd></div><div><dt>Ataque</dt><dd>5</dd></div><div><dt>Defensa</dt><dd>1</dd></div><div><dt>Suerte</dt><dd>4</dd></div><div><dt>Oro</dt><dd>10</dd></div><div><dt>Pociones</dt><dd>1</dd></div></dl>
+        </li>
+        <li class="heroe">
+          <img class="px" src="img/heroe_demonio.png" width="144" height="144" alt="">
+          <h3>Demonio</h3>
+          <p class="cita">Una de las criaturas del castillo que se negó a servir a la maldad.</p>
+          <p class="ventaja">Roba vida con cada golpe, pero no trae oro ni pociones.</p>
+          <dl><div><dt>Vida</dt><dd>48</dd></div><div><dt>Ataque</dt><dd>7</dd></div><div><dt>Defensa</dt><dd>1</dd></div><div><dt>Suerte</dt><dd>0</dd></div><div><dt>Oro</dt><dd>0</dd></div><div><dt>Pociones</dt><dd>0</dd></div></dl>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="bestiario">
+    <div class="ancho">
+      <h2>Bestiario</h2>
+      <p class="entrada">Todos fueron alguien antes. Toca una criatura para ver su ataque y saber quién era.</p>
+      <ul class="bestias">
+        <li><button type="button" class="bestia" data-s="rata" data-n="Rata" data-t="Las bestias de los sótanos, establos y alcantarillas, que comieron el oro del dios y crecieron deformes." aria-pressed="false"><img class="px" src="img/rata_0.png" width="96" height="96" alt=""><span>Rata</span></button></li>
+        <li><button type="button" class="bestia" data-s="murcielago" data-n="Murciélago" data-t="Las bestias de los sótanos, establos y alcantarillas, que comieron el oro del dios y crecieron deformes." aria-pressed="false"><img class="px" src="img/murcielago_0.png" width="96" height="96" alt=""><span>Murciélago</span></button></li>
+        <li><button type="button" class="bestia" data-s="arana" data-n="Araña" data-t="Las bestias de los sótanos, establos y alcantarillas, que comieron el oro del dios y crecieron deformes." aria-pressed="false"><img class="px" src="img/arana_0.png" width="96" height="96" alt=""><span>Araña</span></button></li>
+        <li><button type="button" class="bestia" data-s="serpiente" data-n="Serpiente" data-t="Las bestias de los sótanos, establos y alcantarillas, que comieron el oro del dios y crecieron deformes." aria-pressed="false"><img class="px" src="img/serpiente_0.png" width="96" height="96" alt=""><span>Serpiente</span></button></li>
+        <li><button type="button" class="bestia" data-s="escorpion" data-n="Escorpión" data-t="Las bestias de los sótanos, establos y alcantarillas, que comieron el oro del dios y crecieron deformes." aria-pressed="false"><img class="px" src="img/escorpion_0.png" width="96" height="96" alt=""><span>Escorpión</span></button></li>
+        <li><button type="button" class="bestia" data-s="lobo" data-n="Lobo" data-t="Las bestias de los sótanos, establos y alcantarillas, que comieron el oro del dios y crecieron deformes." aria-pressed="false"><img class="px" src="img/lobo_0.png" width="96" height="96" alt=""><span>Lobo</span></button></li>
+        <li><button type="button" class="bestia" data-s="fantasma" data-n="Fantasma" data-t="Los desaparecidos de cada invierno, las vidas que pagaron el pacto." aria-pressed="false"><img class="px" src="img/fantasma_0.png" width="96" height="96" alt=""><span>Fantasma</span></button></li>
+        <li><button type="button" class="bestia" data-s="zombi" data-n="Zombi" data-t="Los súbditos comunes, condenados como su rey a no morir." aria-pressed="false"><img class="px" src="img/zombi_0.png" width="96" height="96" alt=""><span>Zombi</span></button></li>
+        <li><button type="button" class="bestia" data-s="esqueleto" data-n="Esqueleto" data-t="Los soldados de la guardia, aún en sus puestos." aria-pressed="false"><img class="px" src="img/esqueleto_0.png" width="96" height="96" alt=""><span>Esqueleto</span></button></li>
+        <li><button type="button" class="bestia" data-s="ogro" data-n="Ogro" data-t="Los verdugos y carceleros del palacio." aria-pressed="false"><img class="px" src="img/ogro_0.png" width="96" height="96" alt=""><span>Ogro</span></button></li>
+        <li><button type="button" class="bestia" data-s="golem" data-n="Gólem" data-t="Los muros del castillo, que el dios movió como piezas." aria-pressed="false"><img class="px" src="img/golem_0.png" width="96" height="96" alt=""><span>Gólem</span></button></li>
+        <li><button type="button" class="bestia" data-s="demonio" data-n="Demonio" data-t="Los sacerdotes que adoraron a Vhal-Oruun y le ofrecieron más vidas a cambio de más oro." aria-pressed="false"><img class="px" src="img/demonio_0.png" width="96" height="96" alt=""><span>Demonio</span></button></li>
+      </ul>
+      <p class="ficha" id="ficha" aria-live="polite">Elige una criatura.</p>
+      <h3 class="sub">Los jefes</h3>
+      <p class="entrada">Se descubren al enfrentarte a ellos.</p>
+      <ul class="jefes"><li><img class="px" src="img/jefe_1.png" width="128" height="128" alt="Silueta de un jefe"><span>???</span></li><li><img class="px" src="img/jefe_2.png" width="128" height="128" alt="Silueta de un jefe"><span>???</span></li><li><img class="px" src="img/jefe_3.png" width="128" height="128" alt="Silueta de un jefe"><span>???</span></li><li><img class="px" src="img/jefe_4.png" width="128" height="128" alt="Silueta de un jefe"><span>???</span></li><li><img class="px" src="img/jefe_5.png" width="128" height="128" alt="Silueta de un jefe"><span>???</span></li><li><img class="px" src="img/jefe_6.png" width="128" height="128" alt="Silueta de un jefe"><span>???</span></li></ul>
+    </div>
+  </section>
+
+  <section class="muro" id="descargar">
+    <div class="ancho"><div class="tablero">
+      <h2>Descargar</h2>
+      <p>Versión de prueba 0.14.0, gratis. Puede tener fallos.</p>
+      <ul class="descargas">
+        <li><a class="tabla oro" href="https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.14.0/Vellmora.apk">Android</a><p>APK, 55 MB. Al abrirlo, Android te pedirá permiso para instalar apps de esa fuente. Necesita Android 7 o posterior.</p></li>
+        <li><a class="tabla oro" href="https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.14.0/Vellmora.exe">Windows</a><p>EXE de 64 bits, 112 MB, sin instalación. No está firmado: si aparece SmartScreen, pulsa «Más información» y «Ejecutar de todas formas».</p></li>
+        <li><a class="tabla oro" href="https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.14.0/Vellmora-linux.zip">Linux</a><p>ZIP de 64 bits, 31 MB. Descomprímelo, da permiso de ejecución a Vellmora.x86_64 y ábrelo.</p></li>
+        <li><a class="tabla oro" href="jugar/">iPhone y navegador</a><p>Se juega sin instalar nada. En iPhone ábrelo con Safari; con Compartir y «Añadir a pantalla de inicio» lo tienes como app. Descarga unos 13 MB.</p></li>
+      </ul>
+    </div></div>
+  </section>
+</main>
+<footer><p>Vellmora es un juego de RDark Studio, hecho con Godot.</p><p>Tipografía MedievalSharp, de wmk69, con <a href="fuentes/MedievalSharp-OFL.txt">licencia OFL</a>.</p></footer>
+<script src="guion.js"></script>
+</body>
+</html>

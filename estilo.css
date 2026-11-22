@@ -1,0 +1,102 @@
+/* Muro de castillo oscuro; la pieza central son las tres puertas. Colores y texturas del propio juego. */
+@font-face{font-family:"MedievalSharp";src:url(fuentes/MedievalSharp.ttf) format("truetype");font-display:swap}
+:root{
+  --fondo:#120e0b; --panel:#241d17; --linea:#4a3c2e; --texto:#f1e4c6; --suave:#b8a585; --oro:#f0b43c;
+  --tinta:#3a2914; --tinta-oro:#2a1c05; --peligro:#ef6351;
+  --titulos:"MedievalSharp","Palatino Linotype",Palatino,serif;
+  --cuerpo:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--fondo);color:var(--texto);font:1.125rem/1.6 var(--cuerpo)}
+img{max-width:100%}
+.px,.puerta,.antorcha{image-rendering:pixelated}
+h1,h2,h3{font-family:var(--titulos);font-weight:400;line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.9rem,5vw,2.75rem);color:var(--oro)}
+h3{font-size:1.4rem}
+p{margin:0}
+ul,dl,dd{margin:0;padding:0;list-style:none}
+a{color:var(--oro)}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+.saltar{position:absolute;left:-999px;background:var(--oro);color:var(--tinta-oro);padding:.5rem 1rem;z-index:9}
+.saltar:focus{left:1rem;top:1rem}
+.ancho{max-width:70rem;margin:0 auto}
+section{padding:clamp(3rem,8vw,6rem) max(1rem,env(safe-area-inset-left))}
+.muro{background:linear-gradient(#120e0bcc,#120e0b99),url(img/muro.png) 0 0/96px}
+
+.barra{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.25rem 1.5rem;padding:.6rem 1rem;background:var(--fondo);border-bottom:3px solid var(--linea)}
+.marca{font:1.5rem var(--titulos);text-decoration:none}
+.barra nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}
+.barra nav a{color:var(--texto);text-decoration:none;padding:.25rem 0;font-size:1rem}
+.barra nav a:hover{color:var(--oro)}
+
+.portada{display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;padding-block:clamp(2rem,5vw,4rem) clamp(3rem,7vw,5rem);
+  background:radial-gradient(ellipse at 50% 45%,#f0b43c26,transparent 60%),linear-gradient(#120e0b55,#120e0bee),url(img/muro.png) 50% 0/96px}
+.titulo{display:flex;align-items:center;gap:clamp(.25rem,2vw,1.5rem)}
+h1{font-size:clamp(3.25rem,13vw,7.5rem);color:var(--oro);text-shadow:0 4px 0 #2a1605,0 0 40px #f0b43c55}
+.antorcha{flex:none;width:36px;height:84px;background:url(img/antorcha_0.png) 0 0/100% 100%;animation:llama .5s steps(1) infinite}
+@keyframes llama{0%{background-image:url(img/antorcha_0.png)}33%{background-image:url(img/antorcha_1.png)}66%{background-image:url(img/antorcha_2.png)}}
+.lema{font-size:clamp(1.15rem,3vw,1.5rem);text-wrap:balance}
+.puertas{display:flex;justify-content:center;gap:clamp(.75rem,4vw,3rem);width:100%;max-width:44rem}
+.puerta{position:relative;flex:0 1 192px;aspect-ratio:2/3;padding:0;border:0;background:url(img/puerta_cerrada.png) 0 0/100% 100%;cursor:pointer;transition:transform .2s,filter .4s}
+.puerta:hover:not(:disabled){transform:translateY(-6px)}
+.puerta.abriendo{background-image:url(img/puerta_abriendo.png)}
+.puerta.abierta{background-image:url(img/puerta_abierta.png)}
+.puerta:disabled{cursor:default}
+.puerta.apagada{filter:brightness(.4)}
+.puerta img{position:absolute;left:16%;bottom:2%;width:68%;animation:sale .45s ease-out}
+@keyframes sale{from{transform:scale(.4);opacity:0}}
+.resultado{min-height:5.5rem;max-width:34rem}
+#que{font:1.7rem var(--titulos);color:var(--oro)}
+#pista{color:var(--suave)}
+.acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.tabla{display:inline-block;min-width:12rem;padding:.55rem 1rem;border:15px solid;border-image:url(img/boton.png) 15 fill/15px;background:none;color:var(--texto);font:1.25rem/1.2 var(--titulos);text-align:center;text-decoration:none;cursor:pointer;image-rendering:pixelated}
+.tabla:hover{border-image-source:url(img/boton_hover.png)}
+.tabla:active{border-image-source:url(img/boton_press.png)}
+.tabla.oro{border-image-source:url(img/boton_oro.png);color:var(--tinta-oro)}
+.tabla.oro:hover{border-image-source:url(img/boton_oro_hover.png)}
+.tabla.oro:active{border-image-source:url(img/boton_oro_press.png)}
+[hidden]{display:none!important}
+
+.reglas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));gap:2rem 4rem;margin-top:2.5rem}
+.reglas h3{margin-bottom:.35rem}
+.reglas p{max-width:34rem;color:#d9c9a6}
+
+.pergamino{max-width:46rem;margin:0 auto;padding:clamp(.75rem,4vw,2.5rem);border:18px solid;border-image:url(img/pergamino.png) 18/18px round;background:#dcc593;background-clip:padding-box;image-rendering:pixelated;color:var(--tinta)}
+.pergamino h2{color:#7a3d0c;margin-bottom:1.25rem}
+.pergamino p+p,.pergamino details{margin-top:1rem}
+summary{cursor:pointer;font:1.2rem var(--titulos);color:#7a3d0c;padding:.4rem 0}
+.pergamino :focus-visible{outline-color:#7a3d0c}
+details>div{margin-top:.5rem;padding-top:1rem;border-top:2px dashed #a58a5a}
+
+.entrada{color:var(--suave);margin-top:.6rem;max-width:42rem}
+.heroes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15.5rem),1fr));gap:2.5rem 1.5rem;margin-top:2.5rem}
+.heroe{display:flex;flex-direction:column;gap:.5rem}
+.heroe h3{color:var(--oro);font-size:1.6rem}
+.cita{font-style:italic}
+.ventaja{color:var(--suave);font-size:1rem;margin-bottom:auto}
+.heroe dl{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-top:.5rem;padding-top:.6rem;border-top:3px solid var(--linea)}
+.heroe dt{font-size:.85rem;color:var(--suave);line-height:1.2}
+.heroe dd{font-size:1.25rem;line-height:1.2;font-variant-numeric:tabular-nums}
+
+.bestias{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:2rem}
+.bestia{width:100%;display:flex;flex-direction:column;align-items:center;gap:.25rem;padding:.75rem .25rem;border:3px solid transparent;background:none;color:var(--texto);font:1.15rem var(--titulos);cursor:pointer}
+.bestia:hover{background:var(--panel)}
+.bestia[aria-pressed=true]{border-color:var(--oro);background:var(--panel)}
+.ficha{min-height:5.2em;max-width:42rem;margin-top:1.25rem;padding:1rem 1.25rem;border-left:0;background:var(--panel);color:var(--texto)}
+.sub{font-size:1.9rem;color:var(--peligro);margin-top:3rem}
+.jefes{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:1.5rem}
+.jefes li{display:flex;flex-direction:column;align-items:center;padding:1rem .5rem;background:radial-gradient(circle,#6b2a20,#2a1512 75%);font:1.4rem var(--titulos);color:var(--texto)}
+
+.tablero{max-width:46rem;margin:0 auto;padding:clamp(.75rem,3vw,2rem);border:15px solid;border-image:url(img/tablero.png) 15/15px round;background:#2c1a0f;background-clip:padding-box;image-rendering:pixelated}
+.tablero p{margin-top:1rem}
+.descargas{display:grid;gap:1.25rem;margin-top:1.5rem}
+.descargas li{display:grid;grid-template-columns:15rem 1fr;gap:1.25rem;align-items:center}
+.descargas p{margin:0;font-size:1rem;color:#d9c9a6}
+@media (max-width:44rem){.descargas li{grid-template-columns:1fr;gap:.4rem}}
+footer{padding:2.5rem 1rem;text-align:center;color:var(--suave);font-size:1rem}
+
+@media (max-width:56rem){.bestias{grid-template-columns:repeat(4,1fr)}.jefes{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:30rem){.barra nav{gap:.25rem .9rem}.bestias{grid-template-columns:repeat(3,1fr);gap:.5rem}.jefes{grid-template-columns:repeat(2,1fr)}.antorcha{width:24px;height:56px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
