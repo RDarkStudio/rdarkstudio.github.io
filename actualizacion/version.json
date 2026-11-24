@@ -1,23 +1,23 @@
 {
- "name": "0.15.0",
+ "name": "0.16.0",
  "files": {
   "pc": {
    "platform": "pc",
-   "code": 1500,
+   "code": 1600,
    "min_code": 1500,
    "engine": "4.7.2",
-   "sha256": "15b662a7f64b3411caeaafd490d513455be683e0a5b82000e44e85f40dd5be4f",
-   "url": "https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.15.0/vellmora-pc-v0.15.0.pck",
-   "signature": "ExVyc3zSAXdEp/izxh+cPYwg2p6OP72nqupD12jlHXFJAqL1YM7vVgHqsCCZeRwp1r9EvFeOHZPk/67rxNvhvHnVlyihHbARywKNpbJqm5rshCGL24lFe6TiddQKxnxYH891gaMUwAJmRwPwMW5HkGYbHkoROEgrhOXXbnNkhkWyC6WCpH2rdKt3oWaTyeNkPuOshfEShHeX+I1CZ3DJl1Ii3c8e2YNmNHpVW1BMY0pVPfzMVhHfFuunfPeOos6uZEaCi+iO5kDPj6soyHqmDBRBJWmi32bGlybxi196vrS5cQTeyLoFrDyd3gsnzlwfNrdtcRqkVnz5gdqUXtHDgj6jYQhYX4y52VoMCJ4BbS8b4Lq2zleDNgIb2qh9ZQhERCPeNySKIeRx/mhH2YheAuzujrqPtHklGNtRxfi614A3HncMTMwa8zLqmWReFDh2NvnhJEqoWIPyDPY/3tMpTqHGuOg0zj69S8r0K6sprEMkKHMUsFGR1R1/u8dzXUWm"
+   "sha256": "e7064d5360c9c78d77afb252334cb6b2e9ee0a551fa58beb441eefbe45cbdeb5",
+   "url": "https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.16.0/vellmora-pc-v0.16.0.pck",
+   "signature": "I13LGGblhNgcGMHf2FrCGzj/QFqeqV/OM+6orYgiFjI1VKP2eVUiG3gV55tBXDUMX3QUllwFPrUqsIOVmBMuVHt1IZYFPStohIbym4kuOwgrJwK4ozTWCHjh8c38KBbcjNQRQj9r94dM3jADKyt9cTCmjWLvEGnvuXX/WR9Y/09/uJK3tDxo+yo3DpnenK0VLHMSfTf4OMJIk/B0xkJUpPEQ5mg9OblgxTE5jtMJm5p5Ptf+RRipm9u4cgwDn3ktA468n9XNhVU13gxeThIkA9TsKXsuB4yexRgGt7N/IQNItH9HG5pyEKTMfpObfvDEnIgy44LTPIWs6po9v8aSCCGh2UoAP41Ylj0z61n6Y7DhM2L53aj7bjqKwdChpTyXg5vOvQT4a5ytunhb4sjswOelIVrZ5oN0q6mW0oiLOEt6pAuVeVSSSkcn77J8zpql61afaSZG3if3//bULJQVLjHuws22ZAeHwwNDjWrJcNRiengnqC4PBPohms4z+0Mj"
   },
   "android": {
    "platform": "android",
-   "code": 1500,
+   "code": 1600,
    "min_code": 1500,
    "engine": "4.7.2",
-   "sha256": "15b662a7f64b3411caeaafd490d513455be683e0a5b82000e44e85f40dd5be4f",
-   "url": "https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.15.0/vellmora-android-v0.15.0.pck",
-   "signature": "vKdJZ6IjDGtrpGg2C6Atv4UOiLGyw9L6Sl2C9x6ApxvWUD1ZdMUpjZG57qH8S8WJUcE0CmsycEJBz/ugmfrh5pZn0YkcEZo6mGPJknZbN37DPRVJ62T13d0gPNK9Y9t2ZLJ/U/YXQlUhf07jl2RDSkHGECi8ZYwIHYWJhEjscjwBl1if5cXlIONMrGfgOU38fsghVicitpd1pmAdgb0nM2nICQfpHQbZTXQTtxUEOye9tcHO1b+yNrY5qf2RBl+AAI8BVgz0BEM5s/pQowWgQ+opI6Pv97iMA+TWKG9+EJwzNvZDTO4fUlgluymhcXwH+OYizO8tofd5smFz5Ap12b5mmA7EgZYDndF+1AnBh1vNf4UI2MygyBPBLoqmUBAmEkf80ydFi+OEdtgFkdBKA8QaairpGIJQgIaUy9tLM/6bvr7YInSa/HojSa7dGh0yVpzib4ZtZgCGl7yStzSCglkaMSIstVOzWkViQWElduRMtFXwoPdlXvg7VRrHhsIy"
+   "sha256": "e7064d5360c9c78d77afb252334cb6b2e9ee0a551fa58beb441eefbe45cbdeb5",
+   "url": "https://github.com/RDarkStudio/rdarkstudio.github.io/releases/download/v0.16.0/vellmora-android-v0.16.0.pck",
+   "signature": "tqJnIuk2qr/f+Qyn+iH9GU3neC4lillyFXmsxnN6DbTWh5w/q7jLpRS1qaNrtYS+yE9Xl6T9K5YQzPrkEU8qxNOmU5C3p/4wwKee1wO1jmjsJFCYULM41LvMcHFTWa2nkLCoZ7ewmeQN+Cyt+Xa1tnZsVlBTC7IN76RcdSRqdESwaGXbIzmn0B9bZSk0+E1EI7p6NfJ8FOmNlsyz+h6gFfoTxhTewuAfeW5rJh6KZzbz2Zgur6Xf8FqwlQdvibQN3xcgjwn7FvhNnPOsvPG3Hshe0/utcJ8ktZBIUFl4wFEquKJlQpX6WdHbSUjOSjgCk5zCxTl6YAyS6uhA6vlYqgD1GYcYBw5syb/jYjY6nhV9IGphfVbDHqs7/q/q4m9JSL/lOes+cQp0x2/0aHZIomrqfBIbKkM+dmnhS6Wo9kk21KxqOyi71jrRBQFsE1eJJMni36lYCwafeMSVRCgFG6R76RE2nNtEj4TZFeksle3R23aE6qEodV0k1zndTXvK"
   }
  }
 }
